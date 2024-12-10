@@ -2,7 +2,7 @@
 
 Magic Portfolio is a powerful, customizable portfolio website template built with [Once UI](https://once-ui.com) and [Next.js](https://nextjs.org), designed for designers and developers to showcase their work professionally and elegantly.
 
-![Showcase](https://github.com/user-attachments/assets/bb04f077-4bd6-4de7-b3a6-9dd7f3398220)
+![Showcase](https://github.com/user-attachments/assets/9c8a0c6e-fdb3-4345-b45b-8d7226c126a2)
 
 
 ## Project Overview
