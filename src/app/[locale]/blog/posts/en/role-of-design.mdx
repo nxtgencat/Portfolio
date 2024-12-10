@@ -1,25 +1,64 @@
 ---
-title: "The Role of Design Engineering in Sustainable Innovation"
-publishedAt: "2024-08-10"
-summary: "Design engineering is pivotal in driving sustainable innovation. This blog discusses how design engineers are leading the charge in creating products that are not only technologically advanced but also environmentally responsible."
-tag: "Sustainability"
+
+title: "The Placement Portal Project"
+
+publishedAt: "2024-12-10"
+
+image: ""
+
+summary: "Explore the features and architecture of a cutting-edge placement portal designed to simplify and optimize campus recruitment processes."
+
+tag: "Upcoming Project"
+
 ---
 
-The Role of Design Engineering in Sustainable Innovation
-As environmental concerns continue to grow, the role of design engineering in creating sustainable products has never been more critical. Design engineers are increasingly tasked with finding innovative solutions that balance technological advancement with sustainability. They are at the forefront of this movement, integrating eco-friendly principles into every stage of product development.
+# 🚀 Placement Portal: Project Plan and Features
 
-## Designing for Sustainability
+Welcome to the blueprint of our **Placement Portal**, an innovative web application designed to streamline campus placements for students, colleges, and recruiters. Below, you'll find an overview of the project's features, architecture, and database management.
 
-Design engineers use their technical expertise and creative thinking to minimize a product’s environmental impact throughout its lifecycle. This starts with material selection. They prioritize the use of renewable, recyclable, and biodegradable materials, avoiding toxic substances that could harm the environment. For example, in automotive design, engineers might choose lightweight composite materials that improve fuel efficiency and reduce emissions. They also consider the energy efficiency of manufacturing processes and aim to reduce waste through efficient use of resources.
+## 🎯 Key Features
 
-## Merging Sustainability with Functionality
+### 1. **Role-Based Portals**
+- **Admin Portal**: Centralized control for managing users, job posts, and generating reports.
+- **College Portal**: Interface for colleges to monitor student activities and approve profiles.
+- **Student Portal**: Easy-to-use dashboard for students to explore opportunities and apply for jobs.
+- **Recruiter Portal**: Tools for companies to post jobs, search profiles, and track applicants.
 
-Sustainability in design engineering doesn’t mean compromising on performance. In fact, design engineers are finding ways to enhance both performance and sustainability by innovating new designs that meet environmental standards without sacrificing functionality. This might involve designing products that are modular and easy to disassemble for recycling, or creating systems that can be powered by renewable energy sources. The goal is to create products that not only work well but also leave a positive impact on the environment.
+### 2. **Authentication**
+- Built with Supabase's secure authentication services.
+- Supports multiple login options, including email and third-party providers (Google, LinkedIn).
 
-## Digital Tools and Techniques
+### 3. **Core Functionalities**
+- Recruiters can post job openings and specify eligibility criteria.
+- Students can create profiles, upload resumes, and apply for jobs.
+- Colleges can verify student profiles and applications.
+- Real-time updates for job status and application progress.
 
-Digital tools have become indispensable in the quest for sustainable innovation. Design engineers use advanced simulation and modeling software to predict the environmental impact of products before they are manufactured. This allows them to make informed decisions and optimize designs for sustainability. Virtual prototyping, for example, enables engineers to test a product’s performance and environmental footprint without creating physical prototypes. These tools are essential for meeting the growing demand for sustainable products that do not compromise on quality or functionality.
+---
 
-## The Future of Sustainable Design Engineering
+## 🛠️ Database Management
 
-Looking ahead, the role of design engineers in sustainability will only become more important. As regulations become stricter and consumer demand for eco-friendly products increases, design engineers will continue to play a critical role in shaping the future of product development. By fostering a culture of innovation and collaboration, they are driving sustainable change across industries. Their work is crucial in balancing technological progress with environmental responsibility, ensuring that future generations inherit a healthier planet.
+The backbone of the placement portal is a **PostgreSQL database** hosted on Supabase. Here's how the database is structured and managed:
+
+- **Role-Based Data Segmentation**: Separate tables for users, students, recruiters, jobs, and colleges ensure clean and organized data storage.
+- **Relational Design**: All entities, such as students, jobs, and applications, are connected through foreign keys, enabling seamless queries and updates.
+- **Real-Time Sync**: Supabase provides real-time updates, allowing instant reflection of any changes across all user dashboards.
+- **JSON Support**: Complex data, such as application details and job requirements, are stored in JSON columns for flexibility and easier parsing.
+- **Security and Access Control**: Role-based access ensures that each user type (admin, student, recruiter, college) can only access and modify relevant data.
+- **Activity Logs**: Tracks all user actions, like posting jobs or submitting applications, to maintain transparency and audit trails.
+- **Data Backup and Recovery**: Automated backups ensure data integrity and allow quick recovery in case of issues.
+
+---
+
+## ⚙️ Tech Stack
+
+The placement portal leverages modern technologies for scalability and performance:
+
+- **Frontend**: Built using React (Next.js for fast development).
+- **Backend**: API routes powered by Next.js.
+- **Database**: Supabase PostgreSQL for robust data storage.
+- **Hosting**: Supabase (database) and Vercel (frontend).
+
+---
+
+This placement portal is a step towards redefining campus recruitment by providing a seamless and efficient experience for all users. Stay tuned for further updates as we continue building this exciting project!

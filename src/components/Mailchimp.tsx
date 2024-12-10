@@ -1,7 +1,7 @@
 "use client";
 
 import { mailchimp } from '@/app/resources'
-import { Button, Flex, Heading, Input, Text, Background } from '@/once-ui/components';
+import {Button, Flex, Heading, Input, Text, Background, Toast} from '@/once-ui/components';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
@@ -26,6 +26,7 @@ export const Mailchimp = (
     const [email, setEmail] = useState<string>('');
     const [error, setError] = useState<string>('');
     const [touched, setTouched] = useState<boolean>(false);
+    const [showToast, setShowToast] = useState<boolean>(false);
 
     const t = useTranslations();
 
@@ -58,6 +59,15 @@ export const Mailchimp = (
         }
     };
 
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!error && email) {
+            // Instead of submitting to MailChimp, show toast
+            setShowToast(true);
+        }
+    };
+
     return (
         <Flex
             style={{overflow: 'hidden'}}
@@ -72,8 +82,8 @@ export const Mailchimp = (
                 dots={mailchimp.effects.dots as any}
                 lines={mailchimp.effects.lines as any}/>
             <Heading style={{position: 'relative'}}
-                marginBottom="s"
-                variant="display-strong-xs">
+                     marginBottom="s"
+                     variant="display-strong-xs">
                 {newsletter.title}
             </Heading>
             <Text
@@ -92,12 +102,12 @@ export const Mailchimp = (
                     display: 'flex',
                     justifyContent: 'center'
                 }}
-                action={mailchimp.action}
+                onSubmit={handleSubmit}
                 method="post"
                 id="mc-embedded-subscribe-form"
                 name="mc-embedded-subscribe-form">
                 <Flex id="mc_embed_signup_scroll"
-                    fillWidth maxWidth={24} gap="8">
+                      fillWidth maxWidth={24} gap="8">
                     <Input
                         formNoValidate
                         labelAsPlaceholder
@@ -130,7 +140,7 @@ export const Mailchimp = (
                             height="48" alignItems="center">
                             <Button
                                 id="mc-embedded-subscribe"
-                                value="Subscribe"
+                                type="submit"
                                 size="m"
                                 fillWidth>
                                 {t("newsletter.button")}
@@ -139,6 +149,16 @@ export const Mailchimp = (
                     </div>
                 </Flex>
             </form>
+            {showToast && (
+                <Flex className="pt-24">
+                    <Toast
+                        variant="success"
+                        onClose={() => setShowToast(false)}
+                    >
+                        Thank you for subscribing with {email}!
+                    </Toast>
+                </Flex>
+            )}
         </Flex>
     )
 }
