@@ -83,7 +83,7 @@ const about = {
                     <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
                     <>Contributed to the integration of APIs and third-party services into web applications, enhancing functionality and user experience .</>
                 ],
-                images: [ ]
+                images: []
             },
             {
                 company: 'Prasunet Company',
@@ -118,38 +118,12 @@ const about = {
             {
                 title: 'Kotlin, Jetpack Compose',
                 description: <>Developed scalable Android apps using Kotlin, Jetpack Compose, and modern Android libraries like Hilt and Coroutines.</>,
-                images: [
-                    {
-                        src: '/images/projects/nxtventory/nxtventory01.jpg',
-                        alt: 'NxtVentory project interface',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/nxtventory/nxtventory02.jpg',
-                        alt: 'NxtVentory inventory management feature',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                images: []
             },
             {
                 title: 'JavaScript, React, Next.js',
                 description: <>Built responsive web apps with Next.js, leveraging Once UI, Supabase, and dynamic content rendering.</>,
-                images: [
-                    {
-                        src: '/images/projects/portfolio/portfolio01.png',
-                        alt: 'Portfolio homepage',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/portfolio/portfolio02.png',
-                        alt: 'Portfolio project showcase',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                images: []
             },
             {
                 title: 'Python',
@@ -196,78 +170,7 @@ const gallery = {
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
-    images: [
-        {
-            src: '/images/gallery/img-01.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-02.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-03.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-04.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-05.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-06.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-07.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-08.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-09.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-10.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-11.jpg',
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        {
-            src: '/images/gallery/img-12.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-13.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        {
-            src: '/images/gallery/img-14.jpg',
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-    ]
+    images: []
 }
 
 export { person, social, newsletter, home, about, blog, work, gallery };
